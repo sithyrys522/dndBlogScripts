@@ -4,6 +4,8 @@ branch_name=$(git branch --show-current)
 if [[ $branch_name = "master" ]]; then
     git push -u origin master
     exit 0
+elif [[ $branch_name = "dev" ]]; then
+    echo "Don't forget to delete feature branches when you don't need them"
 fi
 
 exit 0
